@@ -1,22 +1,33 @@
-package CadastrarEmpresa;
+package LocadoraDeFilmes;
 
 public class ProgramaPrincipal {
-
-    public static void main(String[] args){
     
-    Vendedor vendedor1 = new Vendedor(132, "lucas", 'n');
-    Vendedor vendedor2 = new Vendedor(133, "carol", 'n');
+    public static void main(String[] args){
 
-    Empresa empresa1 = new Empresa(3);
+        Filme filme1 = new Filme();
 
-    empresa1.inserirVendedor(vendedor1);
-    empresa1.inserirVendedor(vendedor2);
+        filme1.setCodigoFilme(122);
+        filme1.setTituloDoFilme("Tá Chovendo Hambúrguer");
+        filme1.setGenero('A');
 
-    int quantidade = empresa1.quantVendedoresMesmaMercadoria('n');
-    //empresa1.excluirVendedorPeloNome("lucas");
-    System.out.println(empresa1.toString());
-    System.out.println(quantidade);
+        Filme filme2 = new Filme();
+
+        filme2.setCodigoFilme(123);
+        filme2.setTituloDoFilme("Até Que A Morte Nos Separe");
+        filme2.setGenero('A');
 
 
+        Locadora local = new Locadora(2);
+
+        local.inserirNovoFilme(filme1);
+        local.inserirNovoFilme(filme2);
+
+
+        local.excluirFilmePorNome("Tá Chovendo Hambúrguer");
+
+        System.out.println(local.toString());
+
+        //System.out.println(quantidade);
+       
     }
 }
