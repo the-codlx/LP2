@@ -1,4 +1,4 @@
-package CadastrarEmpresa;
+package Classes;
 
 public class Empresa {
     

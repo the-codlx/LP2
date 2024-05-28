@@ -1,4 +1,4 @@
-package Financeira;
+package Classes;
 
 import java.util.Scanner;
 

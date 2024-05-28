@@ -1,4 +1,4 @@
-package LocadoraDeFilmes;
+package Classes;
 
 public class Locadora {
     
