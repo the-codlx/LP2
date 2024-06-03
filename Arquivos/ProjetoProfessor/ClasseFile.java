@@ -23,10 +23,15 @@ public class ClasseFile
         {
             System.out.println("O caminho especificado existe !\nVamos aos testes:\n");
          
-            if(arquivo.isAbsolute())
-                System.out.println("� um caminho absoluto");
-            else
-                System.out.println("N�o � um caminho absoluto");
+            if(arquivo.isAbsolute()){
+
+                System.out.println("É um caminho absoluto");
+
+            }
+            else{
+
+                System.out.println("Não é um caminho absoluto");
+            }
          
             if(arquivo.isFile())
                 System.out.printf("� um arquivo de tamanho %s bytes\n"
