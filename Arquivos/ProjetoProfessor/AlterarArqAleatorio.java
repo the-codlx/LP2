@@ -7,6 +7,7 @@ import java.util.Scanner;
 public class AlterarArqAleatorio {
 
 	public static void main(String[] args) throws FileNotFoundException, IOException {
+		
 		Scanner ler = new Scanner(System.in);
 		Professor professor = new Professor();
 		int matricula,matProf,cont=0;

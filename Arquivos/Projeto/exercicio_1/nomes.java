@@ -17,7 +17,7 @@ public class nomes {
             
             String nome;
 
-            FileWriter out = new FileWriter("nomes.txt");
+            FileWriter out = new FileWriter("nomes.txt", true);
             arquivo = new PrintWriter(out);
             
             System.out.println("Informe os nomes: ");

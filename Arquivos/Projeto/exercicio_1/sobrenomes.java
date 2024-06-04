@@ -12,7 +12,7 @@ public class sobrenomes {
         PrintWriter print = null;
 
         try{
-            FileWriter arquivo = new FileWriter("Sobrenomes.txt");
+            FileWriter arquivo = new FileWriter("Sobrenomes.txt", true);
             print = new PrintWriter(arquivo);
 
             String sobrenomes;
