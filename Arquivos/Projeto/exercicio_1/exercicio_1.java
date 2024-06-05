@@ -1,38 +1,63 @@
 package Projeto.exercicio_1;
-import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.RandomAccessFile;
+import java.io.PrintWriter;
 import java.util.Random;
+import java.util.Scanner;
 
 public class exercicio_1 {
     
     public static void main(String[] args) {
-        
-        String[] nomes = readLineFromFiles("nomes.txt");
-        RandomAccessFile sobrenomeAleatorio = new RandomAccessFile("sobrenome.txt", "r");
 
-        Random random = new Random();
+        Scanner lerDoTeclado = new Scanner(System.in);
+
+        System.out.println("Digite quantas pessoas deseja gerar: ");
+        int num = lerDoTeclado.nextInt();
 
         try(
-            while()
-            int index = random.nextInt(3);
-        
-        )
+            Scanner lerArquivo1 = new Scanner(new FileReader("nomes.txt"));
+            Scanner lerArquivo2 = new Scanner(new FileReader("sobrenomes.txt"));
+            
+            PrintWriter pessoas = new PrintWriter("pessoas_geradas.txt");)
+        {
 
-    }
+            Random random = new Random();
 
-    public static String[] lerLinhasDeArquivos(String caminho){
+            for(int i = 0; i < num && lerArquivo1.hasNext() && lerArquivo2.hasNext(); i++){
 
-        try(BufferedReader br = new BufferedReader(new FileReader(caminho))){
+                String nome = lerArquivo1.next();
+                String sobrenome = lerArquivo2.next();
 
-            return br.lines().toArray(String[]::new); 
-        
+                String iniciaisDoMeio = gerarIniciaisDoMeio(random);
+                
+                int idade = random.nextInt(101);
+
+                pessoas.println(nome + " " + iniciaisDoMeio + " " + sobrenome + " " + " - Idade: " + idade);
+
+                }
+
+            }
+            catch(Exception e){
+
+                System.out.println(e);
+                
+            }
+
         }
-        catch(Exception e){
-            System.out.println(e);
-        }
-        finally{br.close();}
-        
+
+        private static String gerarIniciaisDoMeio(Random random) {
+
+            int numIniciais = random.nextInt(3); 
+            StringBuilder iniciais = new StringBuilder();
+
+            for (int i = 0; i < numIniciais; i++) {
+
+                char inicial = (char) (random.nextInt(26) + 'A');
+                iniciais.append(inicial).append(". ");
+
+            }
+
+            return iniciais.toString();
+       
     }
 
 }

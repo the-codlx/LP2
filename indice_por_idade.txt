@@ -1,0 +1,9 @@
+Linha 4: Davi  Medani  - Idade: 2
+Linha 10: Gabriel U. H.  Nascimento  - Idade: 7
+Linha 2: Matheus X.  Ferreira  - Idade: 11
+Linha 6: Theo W.  Pimenta  - Idade: 26
+Linha 1: Lucas  Nunes  - Idade: 36
+Linha 8: Benjamin H. R.  Ribeiro  - Idade: 46
+Linha 3: Joao  Demuner  - Idade: 67
+Linha 7: Rafael Q.  Silva  - Idade: 93
+Linha 9: Enzo W.  Alves  - Idade: 96
